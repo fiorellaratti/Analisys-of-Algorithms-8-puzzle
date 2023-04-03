@@ -52,15 +52,3 @@ def Breadth_First_Search(initial, goal):
     return "Unsolvable"
 
 
-def main():
-    initial = [1, 3, 4, 8, 0, 2, 7, 6, 5]
-    goal = [1, 2, 3, 8, 0 ,4, 7, 6, 5]
-
-    cost = Breadth_First_Search(initial, goal)
-
-    if cost == "Unsolvable":
-        print("Goal state not found")
-    else:
-        print("Final cost to reach goal state:", cost)
-
-main()
