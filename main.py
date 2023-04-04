@@ -1,5 +1,5 @@
 import BFS 
-# import DFS
+import DFS
 # import DIJKSTRA
 
 
@@ -10,13 +10,18 @@ def main():
     bfs_cost = BFS.Breadth_First_Search(initial, goal)
     #dfs_cost = DFS.Depth_First_Search(initial, goal)
     #dijkstra_cost = DIJKSTRA.Dijkstra_Search(initial, goal)
-    
+    dfs_cost = DFS.Depth_First_Search(initial, goal)
 
 
     if bfs_cost == "Unsolvable":
         print("Goal state not found")
     else:
         print("Final cost to reach goal state:", bfs_cost)
+
+    if dfs_cost == "Unsolvable":
+        print("Goal state not found")
+    else:
+        print("Final cost to reach goal state:", dfs_cost)
 
 
 
