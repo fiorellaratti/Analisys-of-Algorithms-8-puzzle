@@ -1,11 +1,12 @@
 from queue import PriorityQueue
 
+
 def print_current_state(state):
     for i in range(3):
         for j in range(3):
             print(state[i * 3 + j], end=" ")
         print()
-
+    print()
 
 def Dijkstra_Search(initial, goal):
     # possible moves
@@ -43,23 +44,24 @@ def Dijkstra_Search(initial, goal):
         # For each possible move
         for move in moves:
             # Calculate the new row and column of the zero tile based on the move
-            if move == 'up':
-                new_row = blank_row - 1
-                new_col = blank_col
+            if move == 'left':
+                new_row = blank_row
+                new_col = blank_col - 1
             elif move == 'right':
                 new_row = blank_row
                 new_col = blank_col + 1
+            elif move == 'up':
+                new_row = blank_row - 1
+                new_col = blank_col
             elif move == 'down':
                 new_row = blank_row + 1
                 new_col = blank_col
-            elif move == 'left':
-                new_row = blank_row
-                new_col = blank_col - 1
-
+        
+        print(move)
+        
         if 0 <= new_row < 3:
             if 0 <= new_col < 3:
                 new_index = new_row * 3 + new_col
-
                 new_state = list(current_state)
                 new_state[blank_index], new_state[new_index] = new_state[new_index], new_state[blank_index]
                 new_state = tuple(new_state)
@@ -72,7 +74,7 @@ def Dijkstra_Search(initial, goal):
                     # add new state to priority queue with calculated cost
                     # because values and cost are the same.
                     pq.put((cost, new_state))
-
+        print(new_index)
         moves.reverse()
 
     return "Unsolvable"
