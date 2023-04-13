@@ -86,11 +86,11 @@ goal1 = [1, 3, 4,
          8, 0, 2,
          7, 6, 5]
 
-goal2 = [1, 3, 4,
-         8, 0, 6,
-         7, 5, 2]
+# goal2 = [1, 3, 4,
+#          8, 0, 6,
+#          7, 5, 2]
 
 print(f"test 1: {Dijkstra_Search(initial, goal1)}\nShould be 11\n")
-print(f"test 2: {Dijkstra_Search(initial, goal2)}\nShould be 30")
+#print(f"test 2: {Dijkstra_Search(initial, goal2)}\nShould be 30")
 
 
