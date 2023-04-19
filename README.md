@@ -1,4 +1,5 @@
 # 8-Puzzle Solver
+link to repo: https://github.com/fiorellaratti/Analisys-of-Algorithms-8-puzzle
 
 This program is a Python implementation of three different algorithms to solve the 8-puzzle problem: Breadth First Search (BFS), Depth First Search (DFS), and Dijkstra's Algorithm. The 8-puzzle is a classic sliding puzzle game consisting of a 3x3 grid of numbered tiles, with one empty space that allows tiles to be moved.
 
@@ -32,7 +33,7 @@ Each <tile> is a digit from 0 to 8, where 0 marks the blank space and the other 
 
 ## Output Format
 
-The program outputs the cost of the optimal solution and a sequence of moves that lead from the initial state to the goal state. The moves are represented as letters: L for left, U for up, R for right, and D for down.
+The program outputs the cost of the optimal solution in the terminal/command prompt after running the selected algorithm.
 
 ## Example
 
