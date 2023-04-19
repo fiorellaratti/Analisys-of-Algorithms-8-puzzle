@@ -39,15 +39,19 @@ The program outputs the cost of the optimal solution in the terminal/command pro
 
 Suppose we have the following start state:
 
+```
 7 2 4
 5 0 6
 8 3 1
+```
 
 And we want to solve the puzzle using BFS and the following goal state:
 
+```
 1 3 4
 8 0 2
 7 6 5
+```
 
 We would create two files, start.txt and goal.txt, with the respective states, and then run the command:
 
