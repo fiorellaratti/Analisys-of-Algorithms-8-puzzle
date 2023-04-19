@@ -47,7 +47,7 @@ Suppose we have the following start state:
 8 3 1
 ```
 
-And we want to solve the puzzle using BFS and the following goal state:
+And we want to solve the puzzle using DIJKSTRA'S and the following goal state:
 
 ```
 2 4 0
