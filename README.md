@@ -7,7 +7,9 @@ This program is a Python implementation of three different algorithms to solve t
 
 To run the program, clone the repository and navigate to the project directory in your terminal. Then run the command:
 
-python main.py <algorithm> <start_state_file> <goal_state_file>
+```
+$ python main.py <algorithm> <start_state_file> <goal_state_file>
+```
 Where <algorithm> is one of bfs, dfs, or dijkstra, <start_state_file> is a file containing the initial state of the puzzle, and <goal_state_file> is a file containing the goal state of the puzzle. See the Input Format section for details on how to format these files.
 
 ## Algorithms
