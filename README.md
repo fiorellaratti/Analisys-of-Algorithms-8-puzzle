@@ -27,7 +27,7 @@ Dijkstra's Algorithm is a shortest-path algorithm that finds the shortest path b
 
 The program takes two input files, one containing the initial state of the puzzle and one containing the goal state of the puzzle. The files should be formatted as follows:
 
-```file.txt
+```txt
 X X X
 X X X
 X X X
