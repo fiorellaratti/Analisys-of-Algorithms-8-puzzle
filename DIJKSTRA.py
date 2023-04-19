@@ -13,7 +13,7 @@ def printQueue(pq):
             pq.put(item)
 
 #helper function
-def print_current_state(state):
+def print_state(state):
     print()
     for i in range(3):
         for j in range(3):
@@ -42,10 +42,9 @@ def Dijkstra_Search(initial, goal):
     pq.put((costs[initial], initial))
 
     while not pq.empty():
-        print("--------------------------")
+        #print("--------------------------")
         #printQueue(pq)
         current_cost, current_state = pq.get()
-        print_current_state(current_state)
         if current_state == goal:
             return costs[current_state]
 
@@ -94,7 +93,8 @@ def Dijkstra_Search(initial, goal):
 
                             # add new state to priority queue with updated cost
                             pq.put((new_cost, new_state))
-
+        #print_current_state(new_state)
+        #print(new_cost)
         # reverse the order of moves so that it tries to go in a different direction in the next iteration
         moves.reverse()
     return "Unsolvable"
@@ -104,6 +104,10 @@ initial = [7, 2, 4,
            5, 0, 6,
            8, 3, 1]
 
+test = [2, 5, 4,
+        7, 0, 6,
+        8, 3, 1]
+
 goal1 = [1, 3, 4,
          8, 0, 2,
          7, 6, 5]
@@ -112,6 +116,6 @@ goal2 = [1, 3, 4,
          8, 0, 6,
          7, 5, 2]
 
-#print(f"test 1: {Dijkstra_Search(initial, goal1)}\nShould be 11\n")
-print(f"test 2: {Dijkstra_Search(initial, [1, 3, 4, 8, 0, 2, 7, 6, 5])}\nShould be 30")
+#print(f"test 1: {Dijkstra_Search(initial, test)}\nShould be 11\n")
+#print(f"test 2: {Dijkstra_Search(initial, goal2)}\nShould be 30")
 
