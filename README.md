@@ -51,11 +51,11 @@ And we want to solve the puzzle using BFS and the following goal state:
 
 We would create two files, start.txt and goal.txt, with the respective states, and then run the command:
 
-python main.py bfs start.txt goal.txt
+```$ python main.py bfs start.txt goal.txt```
+
 The output would be
 
 Shortest path cost: 11
-Moves: RDLUURRDDLL
 
 ## Contributors
 
