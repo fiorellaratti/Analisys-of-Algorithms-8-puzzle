@@ -49,18 +49,18 @@ def main():
         if bfs_cost == "Unsolvable":
             print("Goal state not found")
         else:
-            print("Final cost to reach goal state:", bfs_cost)
+            print("Final cost to reach goal state by BFS:", bfs_cost)
 
     if algorithm == "dfs":
         if dfs_cost == "Unsolvable":
             print("Goal state not found")
         else:
-            print("Final cost to reach goal state:", dfs_cost)
+            print("Final cost to reach goal state by DFS:", dfs_cost)
 
     if algorithm == "dijkstra":
         if dijkstra_cost == "Unsolvable":
             print("Goal state not found")
         else:
-            print("Final cost to reach goal state:", dijkstra_cost)
+            print("Final cost to reach goal state by DIJKSTRA:", dijkstra_cost)
 
 main()
