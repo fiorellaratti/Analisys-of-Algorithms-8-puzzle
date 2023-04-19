@@ -59,7 +59,7 @@ def Dijkstra_Search(initial, goal):
 
         blank_row, blank_col = divmod(blank_index, 3)  # 3 because it's a 3x3 grid
 
-        # For each possible move
+        # itering through each possible move
         for move in moves:
             # Calculate the new row and column of the zero tile based on the move
             if move == 'left':
@@ -75,18 +75,17 @@ def Dijkstra_Search(initial, goal):
                 new_row = blank_row + 1
                 new_col = blank_col
 
-            
-
             if 0 <= new_row < 3:
                 if 0 <= new_col < 3:
                     new_index = new_row * 3 + new_col
                     new_state = list(current_state)
-                    new_state[blank_index], new_state[new_index] = new_state[new_index], new_state[blank_index]
+                    new_state[blank_index] = current_state[new_index]
+                    new_state[new_index] = current_state[blank_index]
                     new_state = tuple(new_state)
 
                     if new_state not in is_visited:
                         # calculate cost of moving to new state
-                        move_cost = abs(new_state[new_index] - goal[new_index])
+                        move_cost = new_state[blank_index]
                         new_cost = costs[current_state] + move_cost
 
                         # update the cost of the new state in the dictionary
@@ -98,10 +97,7 @@ def Dijkstra_Search(initial, goal):
 
         # reverse the order of moves so that it tries to go in a different direction in the next iteration
         moves.reverse()
-
     return "Unsolvable"
-
-
 
 
 initial = [7, 2, 4,
@@ -116,6 +112,6 @@ goal2 = [1, 3, 4,
          8, 0, 6,
          7, 5, 2]
 
-print(f"test 1: {Dijkstra_Search(initial, goal1)}\nShould be 11\n")
-#print(f"test 2: {Dijkstra_Search(initial, goal2)}\nShould be 30")
+#print(f"test 1: {Dijkstra_Search(initial, goal1)}\nShould be 11\n")
+print(f"test 2: {Dijkstra_Search(initial, [1, 3, 4, 8, 0, 2, 7, 6, 5])}\nShould be 30")
 
