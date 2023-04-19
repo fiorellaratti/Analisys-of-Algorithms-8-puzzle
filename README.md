@@ -50,18 +50,18 @@ Suppose we have the following start state:
 And we want to solve the puzzle using BFS and the following goal state:
 
 ```
-1 3 4
-8 0 2
-7 6 5
+2 4 0
+7 5 6
+8 3 1
 ```
 
 We would create two files, start.txt and goal.txt, with the respective states, and then run the command:
 
-```$ python main.py bfs start.txt goal.txt```
+```$ python main.py dijkstra start.txt goal.txt```
 
 The output would be
 
-Shortest path cost: 11
+Final cost to reach goal state: 18
 
 ## Contributors
 
