@@ -31,7 +31,7 @@ The program takes two input files, one containing the initial state of the puzzl
 <tile> <tile> <tile>
 <tile> <tile> <tile>
 
-Each <tile> is a digit from 0 to 8, where 0 marks the blank space and the other digits are real tiles numbers should not repeat.
+Each <tile> is a digit from 0 to 8, where 0 marks the blank space and the other digits are real tiles numbers should not repeat. tiles are separate by a space if this condition is not met i will not work properly. make sure to add a space in between the tiles.
 
 ## Output Format
 
